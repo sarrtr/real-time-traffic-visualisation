@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Visualisation</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            font-family: Arial, sans-serif;}
+        #stats {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        #tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+            pointer-events: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="stats">
+        <h3>Real-time traffic visualisation</h3>
+        <div>
+            <label>
+                <input type="checkbox" id="suspicious-toggle" checked>
+                Show Suspicious Activity
+            </label>
+        </div>
+        <div id="common-locations"></div>
+    </div>
+    <div id="tooltip"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server/static:/app/static
+
+  sender:
+    build: ./sender
+    volumes:
+      - ./data:/data
+    depends_on:
+      - server
