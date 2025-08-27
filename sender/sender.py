@@ -22,13 +22,13 @@ def send_data():
                 'suspicious': row['suspicious']
             }
             try:
-                response = requests.get('http://server:5000/data', params=params, timeout=5)
+                response = requests.get('http://server:5050/data', params=params, timeout=5)
                 print(f"Sent data: {params}, response: {response.status_code}")
             except ConnectionError:
                 print("Server not available, retrying in 2 seconds...")
                 time.sleep(2)
                 try:
-                    response = requests.get('http://server:5000/data', params=params, timeout=5)
+                    response = requests.get('http://server:5050/data', params=params, timeout=5)
                     print(f"Sent data on retry: {params}, response: {response.status_code}")
                 except ConnectionError as e:
                     print(f"Failed to send data: {e}")
