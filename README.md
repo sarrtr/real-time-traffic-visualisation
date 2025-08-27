@@ -16,9 +16,9 @@ The data is taken from given csv-file. Each row in this file represents a "packa
 - the traffic is represented by dots of different colors that pop up and dissapear after 10 seconds.
 - normal traffic is marked with green, and suspicious traffic is marked with red.
 
-![image_1]()
+![image_1](https://github.com/sarrtr/real-time-traffic-visualisation/blob/main/assets/image_1.png?raw=true)
 
-![image_2]()
+![image_2](https://github.com/sarrtr/real-time-traffic-visualisation/blob/main/assets/image_2.png?raw=true)
 
 ## 💻 Tech stack
 
